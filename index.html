@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Browser</title>
+    <link rel="icon" type="image/png" href="images/logo3.png">
+    <script src="https://kit.fontawesome.com/e41299df2d.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="blob-outer-container">
+        <div class="blob-inner-container">
+            <div class="blob">
+                <div class="black-blob"></div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="" class="navbar-logo"><img src="images/logo3.png" background="transparent" height="50px" width="50px" alt="Colour Browser Logo"><p1>Chromatique</p1><p2>Studio</p2></a>
+            <button class="navbar-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="index.html" class="navbar-links-active">Home</a></li>
+                <li class="navbar-item"><a href="studio.html" class="navbar-links">Studio</a></li>
+                <li class="navbar-item"><a href="about.html" class="navbar-links">About</a></li>
+                <li class="navbar-item"><a href="contact.html" class="navbar-links">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1 class="h1">Welcome</h1>
+    <div class="welcontainer" id="welcontainer">
+        Explore
+        <div class="flip" id="flip">
+            <div><div><a href="#ideas" >Ideas</a></div></div>
+            <div><div><a href="#colours" >Colours</a></div></div>
+            <div><div><a href="#designs" >Designs</a></div></div>
+            <div><div><a href="#fonts" >Fonts</a></div></div>
+            </div>
+    </div>
+</body>
+<footer class="licence">
+    <div id="licence">Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a>is licensed by CC BY 4.0</div>
+    </footer>
+</html>
+<style>
+
+@font-face {
+    font-family: 'Stella Aesta';
+    src: url('./fonts/Stella\ Aesta\ Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'nabi';
+    src: url('./fonts/nabi-modern-font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Juliette';
+    src: url('./fonts/Juliette.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gabriela Stencil';
+    src: url('./fonts/GabrielaStencil-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Blacker Pro';
+    src: url('./fonts/Zetafonts - Blacker Pro Titling Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'RoseHot';
+    src: url('./fonts/RoseHot.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Le Jour Script';
+    src: url('./fonts/Le Jour Script.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Le Jour Serif';
+    src: url('./fonts/Le Jour Serif.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Ocean Trace';
+    src: url('./fonts/OceanTrace.ttf') format('truetype');
+}
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background: #000000;
+        min-height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    .navbar-logo{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        padding: none;
+        height: 10%;
+        text-shadow: 0 0 20px white;
+    }
+    .navbar-logo p1{
+        text-decoration: none;
+        color: #ffffff;
+        font-family: 'nabi', sans-serif;
+        font-size: 45px;
+        text-shadow: 0 0 20px white;
+    }
+    .navbar-logo p2{
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 30px;
+        font-family: 'Juliette', cursive;
+        text-shadow: 0 0 20px white;
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80px;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        background: transparent;
+        backdrop-filter: blur(10px);
+        z-index: 999;
+    }
+
+    .navbar-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 2rem;
+        max-width: 1600px;
+        background: transparent;
+        height: 10%;
+    }
+
+    .navbar-container .navbar-menu{
+        display: flex;
+        text-align: center;
+        gap: 1.5rem;
+        list-style: none;
+
+    }
+
+    .navbar-container .navbar-menu .navbar-item .navbar-links{
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 2rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        font-family: 'Stella Aesta', cursive;
+    }
+
+    .navbar-container .navbar-menu .navbar-item .navbar-links:hover{
+        color: #c0c0c0;
+        transform: scale(1.1);
+    }
+    .navbar-container .navbar-menu .navbar-item .navbar-links-active{
+        text-decoration: underline;
+        color: #c0c0c0;
+        font-size: 2rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        font-family: 'Stella Aesta', cursive;
+    }
+        
+    .navbar-toggle{
+        background: transparent;
+        padding: 10px;
+        border: none;  
+        cursor: pointer;
+        display: none;
+    }
+
+    .bar{
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease-in-out;
+        background-color: #ffffff;
+    }
+
+    .blob-outer-container{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+        inset: 0;
+        margin: auto;
+        filter: blur(100px);
+    }
+
+    .blob-inner-container{
+       border-radius: 99999px;
+       position: absolute;
+       inset: 0;
+       margin: auto;
+       width: 100vw;
+       height: 100vh;
+       min-width: 100px;
+       overflow: hidden;
+       background-color: #fff;
+       transform: scale(0.6);
+    }
+
+    .blob{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        inset: 0;
+        margin: auto;
+        background: conic-gradient(from 0deg, rgb(88, 154, 163), rgb(255, 157, 91), #80ff4e, #4799db, #ab2666, #b47a7a, #ee82ee, #dd3f3f);
+        animation: spinblob 8s linear infinite;
+    }
+
+    .black-blob{
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        background: #000000;
+        border-radius: 99999px; 
+        animation: spinblob 6s linear infinite;
+        height: 10%;
+        width: 5%;
+    }
+
+    .h1{
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        font-size: 150px;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: -20px;
+        font-family: 'Blacker Pro', sans-serif;
+    }
+
+    .welcontainer{
+        color: #999;
+        font-size: 50px;
+        font-weight: bold;
+        padding-top:-50px;
+        position: relative;
+        width: 100%;
+        top: 35%;
+        display: block;
+        text-align: center;
+        font-family: 'Ocean Trace', serif;
+    }
+    .welcontainer .flip{
+        height: 65px;
+        overflow: hidden;
+        color: white;
+        font-family: 'RoseHot', serif;
+        text-decoration: none;
+        position: relative;
+    }
+
+    .welcontainer .flip a{
+        text-decoration: none;
+        color: white;
+    }
+    .welcontainer .flip div div{
+        height: 55px;
+        padding: 2px 12px;
+        color: #fff;
+        display: inline-block;
+        margin-bottom: 35px;
+
+    }
+
+    .welcontainer .flip div:first-child{
+        animation: show 5s ease-in-out infinite;
+        animation-duration: 5s;
+    }
+    .welcontainer .flip div div{
+        background: transparent;
+    }
+    .welcontainer .flip div:first-child div{
+        background: transparent;
+    }
+    .welcontainer .flip div:last-child div{
+        background: transparent;
+    }
+    .licence{
+        display: none;
+    }
+
+    @keyframes show{
+        0%{margin-top: -275px;}
+        8%{margin-top: -275px;}
+        20%{margin-top: -185px;}
+        33%{margin-top: -185px;}
+        45%{margin-top: -95px;}
+        58%{margin-top: -95px;}
+        70%{margin-top: 0px;}
+        85%{margin-top: 0px;}
+        100%{margin-top: -275px;}
+    }
+
+        
+    @keyframes spinblob{
+        0%{
+            transform: rotate(0deg) scale(2);
+        }
+        100%{
+            transform: rotate(360deg) scale(2);
+        }
+    }
+
+    @media (max-width: 480px){
+
+
+        .navbar-logo p1{
+            text-decoration: none;
+            color: #ffffff;
+            font-family: 'nabi', sans-serif;
+            font-size: 45px;
+            text-shadow: 0 0 20px white;
+            display: none;
+        }
+        .navbar-logo p2{
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 35px;
+            font-family: 'Juliette', cursive;
+            text-shadow: 0 0 20px white;
+            display: none;
+        }
+        .navbar{
+            backdrop-filter: none;
+
+        }
+        .navbar-container .navbar-menu{
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.7rem;
+            position: absolute;
+            height: 100vh;
+            width: 250px;
+            top: 0;
+            right: 0;
+            padding: 5rem 1.5rem;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+            background: transparent;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-toggle{
+            display: block;
+            z-index: 999;
+
+        }
+
+        .navbar-toggle.active .bar:nth-child(2){
+            opacity: 100;
+            width: 3px;
+            border-radius: 5px;
+        }
+        .navbar-toggle.active .bar:nth-child(1){
+            transform: translateY(8px) translateX(10px) rotate(90deg);
+        }
+        .navbar-toggle.active .bar:nth-child(3){
+            transform: translateY(-8px) translateX(-10px) rotate(-90deg);
+        }
+        .navbar-container .navbar-menu.active{
+            display: flex;
+        }
+
+        .h1{
+            font-size: 70px;
+            padding-top: 140px;
+        }
+        .welcontainer{
+            font-size: 25px;
+            top: 25%;
+        }
+
+     }
+
+
+
+    @media screen and (max-width: 880px) and (min-width: 481px){
+        .navbar{
+            backdrop-filter: none;
+
+        }
+        .navbar-container .navbar-menu{
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.7rem;
+            position: absolute;
+            height: 100vh;
+            width: 250px;
+            top: 0;
+            right: 0;
+            padding: 5rem 1.5rem;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+            background: transparent;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-toggle{
+            display: block;
+            z-index: 999;
+
+        }
+
+        .navbar-toggle.active .bar:nth-child(2){
+            opacity: 100;
+            width: 3px;
+            border-radius: 5px;
+        }
+        .navbar-toggle.active .bar:nth-child(1){
+            transform: translateY(8px) translateX(10px) rotate(90deg);
+        }
+        .navbar-toggle.active .bar:nth-child(3){
+            transform: translateY(-8px) translateX(-10px) rotate(-90deg);
+        }
+        .navbar-container .navbar-menu.active{
+            display: flex;
+        }
+        .h1{
+            font-size: 100px;
+            padding-top: 70px;
+        }
+        .welcontainer{
+            font-size: 35px;
+            top: 30%;
+        }
+            
+    }
+    
+</style>
+<script>
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbarMenu = document.querySelector('.navbar-container .navbar-menu');
+    navbarToggle.addEventListener('click', () => {
+        navbarToggle.classList.toggle('active');
+        navbarMenu.classList.toggle('active'); 
+    });
+</script>
+<!-- add a multicolour gradient background from ChatGPT...-->
+<!-- remove the top navbar or make it transparent with blur backdrop-->
