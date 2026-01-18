@@ -31,6 +31,57 @@
             </ul>
         </div>
     </nav>
+
+    <div class="content">
+        <div id="box1" class="box">
+            <div id="co-up" class="co11">Warm Sand</div>
+            <div id="co-down" class="co12">Ocean Teal</div>
+        </div>
+        <div id="box2" class="box">
+            <div id="co-up" class="co21">Deep Poppy</div>
+            <div id="co-down" class="co22">Baby Peri</div>
+        </div>
+        <div id="box3" class="box">
+            <div id="co-up" class="co31">Brick Orange</div>
+            <div id="co-down" class="co32">Light Yellow</div>
+        </div>
+        <div id="box4" class="box">
+            <div id="co-up" class="co41">Dusty Lavender</div>
+            <div id="co-down" class="co42">Fairy Floss</div>
+        </div>
+        <div id="box5" class="box">
+            <div id="co-up" class="co51">Lavender Blush</div>
+            <div id="co-down" class="co52">Blush</div>
+        </div>
+        <div id="box6" class="box">
+            <div id="co-up" class="co61">Uranian Blue</div>
+            <div id="co-down" class="co62">Glaucous</div>
+        </div>
+        <div id="box7" class="box">
+            <div id="co-up" class="co71">Cherry Cola</div>
+            <div id="co-down" class="co72">Cream Vanilla</div>
+        </div>
+        <div id="box8" class="box">
+            <div id="co-up" class="co81">Cyprus</div>
+            <div id="co-down" class="co82">Sand Dune</div>
+        </div>
+        <div id="box9" class="box">
+            <div id="co-up" class="co91">Burgundy</div>
+            <div id="co-down" class="co92">Night</div>
+        </div>    
+        <div id="box10" class="box">
+            <div id="co-up" class="co101">Noctis</div>
+            <div id="co-down" class="co102">Marigold</div>
+        </div>
+        <div id="box11" class="box">
+            <div id="co-up" class="co111">Plum Wine</div>
+            <div id="co-down" class="co112">Linen Cloud</div>
+        </div>
+        <div id="box12" class="box">
+            <div id="co-up" class="co121">Deep Current</div>
+            <div id="co-down" class="co122">Polar Ice</div>
+        </div>
+    </div>
 </body>
 </html>
 <style>
@@ -53,7 +104,70 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Sagita';
+    src: url('./fonts/Sagita.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'RosseRossa';
+    src: url('./fonts/RosseRossa.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Mikalea';
+    src: url('./fonts/Mikalea.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'GingerBrand';
+    src: url('./fonts/GingerBrand.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Emberly';
+    src: url('./fonts/Emberly.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Merchant';
+    src: url('./fonts/Merchant.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MeshedDisplay';
+    src: url('./fonts/MeshedDisplay.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Moniqa';
+    src: url('./fonts/Moniqa.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Morgante';
+    src: url('./fonts/Morgante.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Exquite';
+    src: url('./fonts/Exquite.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Briquete';    
+    src: url('./fonts/Briquete.otf') format('opentype');
+}
+@font-face {
+    font-family: 'BookMania';
+    src: url('./fonts/BookMania.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Gelato';
+    src: url('./fonts/Gelato.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Norman';
+    src: url('./fonts/Norman.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Urbanist';
+    src: url('./fonts/Urbanist.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Safira-March';
+    src: url('./fonts/Safira-March.ttf') format('truetype');
+}
     *{
         margin: 0;
         padding: 0;
@@ -79,15 +193,16 @@
     .navbar-logo p1{
         text-decoration: none;
         color: #ffffff;
-        font-family: 'nabi', sans-serif;
-        font-size: 45px;
+        font-family: 'Exquite', sans-serif;
+        font-size: 37px;
         text-shadow: 0 0 20px white;
+        letter-spacing: 8px;
     }
     .navbar-logo p2{
         text-decoration: none;
         color: #ffffff;
-        font-size: 30px;
-        font-family: 'Juliette', cursive;
+        font-size: 40px;
+        font-family: 'Briquete', cursive;
         text-shadow: 0 0 20px white;
     }
     .navbar{
@@ -166,24 +281,26 @@
         position: fixed;
         height: 100%;
         width: 100%;
-        z-index: 0;
+        z-index: -1; /* put gradient behind all content */
         inset: 0;
         margin: auto;
         filter: blur(100px);
+        pointer-events: none; /* prevent it from capturing clicks */
     }
 
-    .blob-inner-container{
-       border-radius: 99999px;
-       position: absolute;
-       inset: 0;
-       margin: auto;
-       width: 100vw;
-       height: 100vh;
-       min-width: 100px;
-       overflow: hidden;
-       background-color: #fff;
-       transform: scale(0.6);
-    }
+     .blob-inner-container{
+         border-radius: 99999px;
+         position: absolute;
+         inset: 0;
+         margin: auto;
+         width: 100vw;
+         height: 100vh;
+         min-width: 100px;
+         overflow: hidden;
+         background-color: transparent; /* allow gradient to show and avoid blocking content */
+         transform: scale(0.6);
+         pointer-events: none;
+     }
 
     .blob{
         position: absolute;
@@ -205,6 +322,191 @@
         height: 10%;
         width: 5%;
     }
+
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        align-content: space-evenly;
+        position: relative; 
+        z-index: 1;
+    }
+    .box{
+        height: 350px;
+        width: 350px;
+        background: rgba(0, 0, 0, 0);
+        border-radius: 20px;
+        overflow: hidden;
+        font-size: 35px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        gap: 10px;
+    }
+    #box1{
+        font-family: 'Sagita';    
+    }
+    #box2{
+        font-family: 'Safira-March';
+    }
+    #box3{
+        font-family: 'RosseRossa';
+    }
+    #box4{
+        font-family: 'Mikalea';
+    }
+    #box5{
+        font-family: 'GingerBrand';
+    }
+    #box6{
+        font-family: 'Emberly';
+    }
+    #box7{
+        font-family: 'Merchant';
+    }
+    #box8{
+        font-family: 'MeshedDisplay';
+    }
+    #box9{
+        font-family: 'Moniqa';
+    }
+    #box10{
+        font-family: 'Gelato';
+    }
+    #box11{
+        font-family: 'Norman';
+    }
+    #box12{
+        font-family: 'BookMania';
+    }
+
+
+    #co-up{
+        display: flex;
+        height: 50%;
+        width: 100%;
+        border-radius: 5px;
+        padding: 20px;
+        align-items: flex-end;
+        flex-direction: row-reverse;
+        
+    }
+    #co-down{
+        display: flex;
+        height: 50%;
+        width: 100%;
+        border-radius: 5px;
+        padding: 20px;
+    }
+    .co11{
+        background-color: #efd9b4;
+        color: #007c91;
+    }
+    .co12{
+        background-color: #007c91;
+        color: #efd9b4;
+    }
+    .co21{
+        background-color: #bf1a42;
+        color: #cddcff;
+    }
+    .co22{
+        background-color: #cddcff;
+        color: #bf1a42;
+    }
+    .co31{
+        background-color: #c14a09;
+        color: #ffffc5;
+    }
+    .co32{
+        background-color: #ffffc5;
+        color: #c14a09;
+    }
+    .co41{
+        background-color: #757a9d;
+        color: #ffe6fe;
+    }
+    .co42{
+        background-color: #ffe6fe;
+        color: #757a9d;
+    }
+    .co51{
+        background-color: #ffe6ed;
+        color: #cf7486;
+        font-size: 35px;
+    }
+    .co52{
+        background-color: #cf7486;
+        color: #ffe6ed;
+        font-size: 35px;
+    }
+    .co61{
+        background-color: #bddbf7;
+        color: #6071b6;
+        font-size: 45px;
+    }
+    .co62{
+        background-color: #6071b6;
+        color: #bddbf7;
+        font-size: 45px;
+    }   
+    .co71{
+        background-color: #9a0002;
+        color: #efe6de;
+    }
+    .co72{
+        background-color: #efe6de;
+        color: #9a0002;
+    }
+    .co81{
+        background-color: #004643;
+        color: #f0ede5;
+    }
+    .co82{
+        background-color: #f0ede5;
+        color: #004643;
+    }
+    .co91{
+        background-color: #93032e;
+        color: #151515;
+        font-size: 40px;
+    }
+    .co92{
+        background-color: #151515;
+        color: #93032e;
+        font-size: 40px;
+    }
+    .co101{
+        background-color: #1f2235;
+        color: #e3a419;
+        font-size: 40px;
+    }
+    .co102{
+        background-color: #e3a419;
+        color: #1f2235;
+        font-size: 40px;
+    }
+    .co111{
+        background-color: #5e4075;
+        color: #f8f9ed;
+        font-size: 40px;
+    }
+    .co112{
+        background-color: #f8f9ed;
+        color: #5e4075;
+        font-size: 40px;
+    }
+    .co121{
+        background-color: #024059;
+        color: #cee4f9;
+    }
+    .co122{
+        background-color: #cee4f9;
+        color: #024059;
+    }
+
         
     @keyframes spinblob{
         0%{
